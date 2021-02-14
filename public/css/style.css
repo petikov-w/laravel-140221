@@ -1,0 +1,131 @@
+body {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.logo {
+    /*font-family: sans-serif;*/
+    color: #718096;
+    font-size: 26px;
+    font-weight: 600;
+    /*margin-left: 50px;*/
+}
+
+.logo a {
+    text-decoration: none;
+    color: #718096;
+}
+
+.logo-2s {
+    display: block;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    opacity: 0.7;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    /*background-color: antiquewhite;*/
+    margin-bottom: 30px;
+    border-bottom: 1px solid #718096;
+}
+
+.main-menu {
+    display: flex;
+    list-style: none;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #718096;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #718096;
+}
+
+.menu-item {
+    padding: 0 50px;
+
+    font-weight: 600;
+}
+.menu-item:hover {
+    color: #2a4877;
+
+}
+
+.s-header, .e-header {
+    /*font-family: sans-serif;*/
+    font-size: 20px;
+    /*color: #11bf16;*/
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.s-header {
+    color: #11bf16;
+}
+
+.e-header {
+    color: #bf1111;
+}
+
+.sss {
+
+    font-size: 20px;
+    color: #218323;
+    font-weight: bold;
+    text-align: right;
+    width: 20%;
+}
+
+.contact-info {
+    /*font-family: sans-serif;*/
+    font-size: 20px;
+    color: #116ebf;
+    font-weight: bold;
+}
+
+.contacts a {
+    text-decoration: none;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.theme-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.theme {
+    /*width: 250px;*/
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: 2px solid #718096;
+    border-radius: 10px;
+    color: #11bf16;
+    margin-right: 10px;
+}
+
+.theme:hover {
+    border: 2px solid #2a4877;
+    color: #218323;
+}
