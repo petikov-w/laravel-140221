@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateThemeTable extends Migration
+class CreateThemesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateThemeTable extends Migration
      */
     public function up()
     {
-        Schema::create('theme', function (Blueprint $table) {
+        Schema::create('themes', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ class CreateThemeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('theme');
+        Schema::dropIfExists('themes');
     }
 }
