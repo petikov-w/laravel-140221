@@ -57,8 +57,8 @@ body {
 }
 
 .menu-item {
+    white-space: nowrap;
     padding: 0 50px;
-
     font-weight: 600;
 }
 .menu-item:hover {
@@ -66,6 +66,9 @@ body {
 
 }
 
+.mi {
+    display: flex;
+}
 .s-header, .e-header {
     /*font-family: sans-serif;*/
     font-size: 20px;

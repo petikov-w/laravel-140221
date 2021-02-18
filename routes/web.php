@@ -19,10 +19,6 @@ Route::get('{slug}', 'App\Http\Controllers\PageController@show');
 Route::get('links/{id}', 'App\Http\Controllers\LinkController@index');
 
 
-//Route::get('links/{id}', function ($id){
-//    return  view('links', ['message' => 'Это страница "Список ссылок"', 'id'=>$id]);
-//});
-
 Route::fallback(function (){
    abort(404, 'Упс! Страница не найдена...');
 });

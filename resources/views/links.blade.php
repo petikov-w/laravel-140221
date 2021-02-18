@@ -1,6 +1,5 @@
-@include('layouts.head')
-<div class="container">
-    @include('layouts.other_header')
+@extends('layouts.basis')
+
+@section('content')
     <div class="s-header">{{$message}} -- {{$id}}</div>
-</div>
-@include('layouts.foot')
+@endsection
