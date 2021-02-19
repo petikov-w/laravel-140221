@@ -13,20 +13,17 @@ class PageController extends Controller
        switch ($slug) {
            case 'about':
              $array_arg = ['message' => 'Это страница "О нас"',
-                           'title_page' => 'laravel-140221 - Страница "О нас"',
-                           'is_home_page' => false];
+                           'title_page' => 'laravel-140221 - Страница "О нас"'];
              break;
            case 'contact':
              $array_arg = ['message' => 'Наши контакты: ',
                            'telefon' => '+7 (909) 428-24-63',
                            'email' => 'developer-krox@yandex.ru',
-                           'title_page' => 'laravel-140221 - Страница контактов',
-                           'is_home_page' => false];
+                           'title_page' => 'laravel-140221 - Страница контактов'];
             break;
            case 'catalog':
                $array_arg = ['message' => 'Это страница c каталогом тем',
-                             'title_page' => 'laravel-140221 - Страница каталога',
-                             'is_home_page' => false];
+                             'title_page' => 'laravel-140221 - Страница каталога'];
                break;
        }
        return  view("$slug", $array_arg);

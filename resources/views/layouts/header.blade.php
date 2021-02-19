@@ -1,13 +1,11 @@
 <?php
-$menu =[['title'=>'Главная', 'url' => '/'],
-    ['title'=>'Каталог', 'url' => '/catalog'],
-    ['title'=>'О нас', 'url' => '/about'],
-    ['title'=>'Контакты', 'url' => '/contact']];
+use App\Models\Menu;
+$menu = Menu:: get(['title', 'url','parent'])->where('parent',0)->toArray();
 ?>
 
 <div class="header">
     <div class="logo">
-        @if ($is_home_page)
+        @if (PetikovService::isHomePage())
             <div class="logo-1s">Petikov<span class="logo-2s">Studio</span></div>
         @else
             <a href="{{'/'}}">
@@ -18,7 +16,7 @@ $menu =[['title'=>'Главная', 'url' => '/'],
     <nav><ul class="main-menu">
             @foreach($menu as $item_menu)
                 @if ($item_menu['url']=='/')
-                    @if ($is_home_page)
+                    @if (PetikovService::isHomePage())
                         <li class="menu-item">{{$item_menu['title']}}</li>
                     @else
                         <a href={{$item_menu['url']}}><li class="menu-item">{{$item_menu['title']}}</li></a>
