@@ -2,14 +2,13 @@
 
 @section('content')
     <?php
-        $list_val = ['Политика', 'Технологии', 'История', 'Природа', 'Наука' ];
-        $ssd = implode('|', $list_val);
+    use App\Models\Theme;
+    $list_themes = Theme:: get(['id', 'title', 'parent'])->where('parent',0)->toArray();
     ?>
-    <div class="data01" data-attr="<?=$ssd; ?>"></div>
         <div class="s-header">{{$message}}</div>
         <div class="theme-list">
-            <?php foreach ($list_val as $val) { ?>
-            <div class="theme"><?php echo $val ?></div>
-            <?php } ?>
+                @foreach($list_themes as $theme)
+                    <div class="theme" data-attr={{$theme['id']}}>{{$theme['title']}}</div>
+                @endforeach
         </div>
 @endsection
