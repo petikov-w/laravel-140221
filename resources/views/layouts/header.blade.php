@@ -1,6 +1,7 @@
 <?php
 use App\Models\Menu;
-$menu = Menu:: get(['title', 'url','parent'])->where('parent',0)->toArray();
+use App\Facades;
+$menu = Menu:: query()->get(['title', 'url','parent'])->where('parent',0)->toArray();
 ?>
 
 <div class="header">
