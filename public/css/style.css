@@ -40,6 +40,8 @@ body {
     border-bottom: 1px solid #718096;
 }
 
+/*==============================================================*/
+
 .main-menu {
     display: flex;
     list-style: none;
@@ -51,24 +53,157 @@ body {
     color: #718096;
 }
 
-.main-menu a {
-    text-decoration: none;
+.main-menu ul, .main-menu li {
+    list-style-type: none; /*убираем маркеры списка*/
+}
+.main-menu li a {
+    text-decoration: none; /*убираем подчеркивание ссылок*/
     color: #718096;
 }
 
-.menu-item {
-    white-space: nowrap;
-    padding: 0 50px;
-    font-weight: 600;
+.main-menu li {
+        position: relative; /*позиционирование*/
+        float: left;
+        white-space: nowrap;
+        padding: 0 50px;
+        font-weight: 600;
 }
-.menu-item:hover {
-    color: #2a4877;
+
+/*.main-menu a {*/
+/*    text-decoration: none;*/
+/*    color: #718096;*/
+/*}*/
+
+
+
+/*.menu-item {*/
+/*    white-space: nowrap;*/
+/*    padding: 0 50px;*/
+/*    font-weight: 600;*/
+/*}*/
+
+/*li .menu-item a:hover {*/
+/*    color: #bf1111;*/
+/*}*/
+
+
+
+/*.menu-item:hover {*/
+/*    !*color: #2a4877;*!*/
+/*    color: #bf1111;*/
+/*}*/
+
+
+/*.menu-item:hover .w2 {*/
+/*    !*color: #2a4877;*!*/
+/*    !*color: #bf1111;*!*/
+/*    display:inherit;*/
+
+/*}*/
+
+/*.menu-item .w2 .w2i {*/
+/*        min-width:170px;*/
+/*        float:none;*/
+/*        display:list-item;*/
+/*        position: relative;*/
+/*        color: #bf1111;*/
+/*}*/
+
+
+/*.mi {*/
+/*    display: flex;*/
+/*}*/
+/*------------------------------------------------------------------*/
+
+/*.main-menu li {*/
+/*    position: relative; !*позиционирование*!*/
+/*    float: left; !*обтекание слева*!*/
+/*}*/
+
+.main-menu ul {
+    position: absolute; /*позиционирование выпадающих блоков*/
+    display: none; /*скрываем блоки*/
+    min-width: 90px; /*минимальная ширина выпадающих блоков*/
+    /*text-align: left;*/
+}
+
+.main-menu li:hover ul {
+    display: block; /*показываем блоки при наведении курсора на родителя*/
+    /*color: #11bf16!important;*/
+    left: 0;
+    padding-left: -60px;
+    background-color: #ffffff;
+    padding-top: 10px;
+
 
 }
 
-.mi {
-    display: flex;
+.main-menu li ul {
+    /*padding: 5px 20px;*/
+
 }
+
+.main-menu li ul a:hover {
+    /*color: darkcyan;*/
+    /*padding: 0 20px;*/
+    color: #ffffff;
+    background-color: #718096;
+}
+
+/*Пункт меню 2-го уровня*/
+.main-menu li ul li a {
+    padding: 3px 30px;
+    /*width: 100px;*/
+    color: #718096;
+    border-radius: 10px;
+}
+
+/*положение выпадающих блоков первого уровня*/
+.main-menu ul {
+    margin: 0;
+    padding: 0;
+    left: -30px;
+    /*top: 100%;*/
+}
+/*положение вложенных выпадающих блоков*/
+main-menu li ul li ul {
+    /*left: 100%;*/
+    /*top: 0%;*/
+}
+/*---------------------------------------------------------------*/
+
+/* скрываем выпадающие списки по умолчанию
+			 * и задаем абсолютное позиционирование */
+/*nav ul ul {*/
+/*    display: none;*/
+/*    position: absolute;*/
+/*    top: 100%;*/
+/*}*/
+
+/* отображаем выпадающий список при наведении */
+/*nav ul li:hover {*/
+/*    !*color: #2a4877;*!*/
+/*    display:inherit;*/
+/*    !*color: #bf1111;*!*/
+/*}*/
+
+/*nav ul li a:hover  {*/
+/*    display:inherit;*/
+/*    color: #bf1111;*/
+/*}*/
+
+/* первый уровень выпадающего списка */
+/*nav ul ul li {*/
+/*    min-width:170px;*/
+/*    float:none;*/
+/*    display:list-item;*/
+/*    position: relative;*/
+/*    color: #bf1111;*/
+/*}*/
+
+/*===========================================================*/
+
+
 .s-header, .e-header {
     /*font-family: sans-serif;*/
     font-size: 20px;
