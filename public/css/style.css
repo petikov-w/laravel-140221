@@ -45,7 +45,8 @@ body {
 .main-menu {
     display: flex;
     list-style: none;
-    width: 30%;
+    /*width: 30%;*/
+    /*width: 30%;*/
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
@@ -59,14 +60,23 @@ body {
 .main-menu li a {
     text-decoration: none; /*убираем подчеркивание ссылок*/
     color: #718096;
+    padding: 5px 30px;
+    /*width: 100px;*/
+    border-radius: 10px;
 }
 
 .main-menu li {
         position: relative; /*позиционирование*/
         float: left;
         white-space: nowrap;
-        padding: 0 50px;
+        padding: 0 10px;
         font-weight: 600;
+}
+
+.main-menu li a:hover {
+    color: #ffffff;
+    background-color: #718096;
+    padding: 3px 30px;
 }
 
 /*.main-menu a {*/
@@ -131,6 +141,7 @@ body {
     display: block; /*показываем блоки при наведении курсора на родителя*/
     /*color: #11bf16!important;*/
     left: 0;
+    top: 25px;
     padding-left: -60px;
     background-color: #ffffff;
     padding-top: 10px;
@@ -162,7 +173,7 @@ body {
 .main-menu ul {
     margin: 0;
     padding: 0;
-    left: -30px;
+    /*left: -30px;*/
     /*top: 100%;*/
 }
 /*положение вложенных выпадающих блоков*/

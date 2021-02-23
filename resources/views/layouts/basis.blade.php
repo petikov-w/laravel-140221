@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     @include('layouts.meta')
-    <title>{{$title_page}}</title>
+    <title>@section('title-page')Laravel-140221 - @show</title>
     @include('layouts.styles')
 </head>
 <body>

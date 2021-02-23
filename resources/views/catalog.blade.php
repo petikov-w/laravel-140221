@@ -1,5 +1,7 @@
 @extends('layouts.basis')
 
+@section('title-page')@parent {{$title}}@endsection
+
 @section('content')
     @php
        use App\Models\Theme;

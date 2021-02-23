@@ -13,15 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\HomeController@index');
-//Route::get('about', 'App\Http\Controllers\AboutController@index');
-Route::get('{slug}', 'App\Http\Controllers\PageController@show');
-Route::get('catalog/{slug}', 'App\Http\Controllers\PageController@show');
-Route::get('contact/{slug}', 'App\Http\Controllers\PageController@show');
 
-//Route::get('links/{id}', 'App\Http\Controllers\LinkController@index');
-Route::match(['get', 'post'],'links/{id}', 'App\Http\Controllers\LinkController@index');
-
+Route::get('/', 'App\Http\Controllers\PageController@showHomePage');
+Route::get('{slug}', 'App\Http\Controllers\PageController@showMenuItem');
+Route::get('catalog/{slug}', 'App\Http\Controllers\PageController@showMenuItem');
+Route::get('contact/{slug}', 'App\Http\Controllers\PageController@showMenuItem');
+Route::get('links/{id}', 'App\Http\Controllers\PageController@ShowLinksPage');
 
 Route::fallback(function (){
    abort(404, 'Упс! Страница не найдена...');
