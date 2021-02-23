@@ -54,6 +54,8 @@ class PageController extends Controller
 
            case 'change-contacts':
                $array_arg = ['message' => 'Это страница c формой для изменения контактной информации',
+                             'telefon' => '+7 (909) 428-24-63',
+                             'email' => 'developer-krox@yandex.ru',
                              'title' => 'Страница изменения контактной информации'];
                $view = 'change-contacts';
                break;

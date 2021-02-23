@@ -278,3 +278,41 @@ main-menu li ul li ul {
     border: 2px solid #2a4877;
     color: #218323;
 }
+
+/*=============== ФОРМЫ =================*/
+
+.form-dsg {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-label, .form-input, .form-submit {
+    width: 400px;
+    font-size: 20px;
+    font-weight: 500;
+    height: 52px;
+    border-radius: 8px;
+    border: none;
+}
+
+.form-label {
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    background-color: #e3eaea;
+    margin-top: -25px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.form-submit {
+    background-color: #12ab8c;
+    color: #fff;
+    margin-top: 20px;
+    width: 250px;
+}
+
