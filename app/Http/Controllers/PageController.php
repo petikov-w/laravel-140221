@@ -6,16 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use App\Models\Menu;
 use App\Models\Theme;
+use App\Models\Contact;
 
 class PageController extends Controller
 {
     public function showMenuItem($slug){
-//          dump($slug);
-
-//        $id_parent = Menu::query()->where('url','/'.$slug)->value('id');
-//        $smenu = Menu:: query()->get(['title', 'url','parent'])->where('parent',$id_parent)->toArray();
-//        dump($id_parent);
-//        dump($smenu);
        switch ($slug) {
            case '':
                $array_arg = ['message' => 'Это главная страница сайта',
@@ -28,9 +23,10 @@ class PageController extends Controller
              $view = 'about';
              break;
            case 'contact':
+             $scontacts = Contact:: query()->get(['id', 'telefon', 'email'])->where('id',1)->toArray();
              $array_arg = ['message' => 'Наши контакты: ',
-                           'telefon' => '+7 (909) 428-24-63',
-                           'email' => 'developer-krox@yandex.ru',
+                           'telefon' => $scontacts[0]['telefon'],
+                           'email' => $scontacts[0]['email'],
                            'title' => 'Страница контактов'];
                $view = 'contact';
             break;
@@ -53,9 +49,11 @@ class PageController extends Controller
                break;
 
            case 'change-contacts':
+               $scontacts = Contact:: query()->get(['id', 'telefon', 'email'])->where('id',1)->toArray();
+
                $array_arg = ['message' => 'Это страница c формой для изменения контактной информации',
-                             'telefon' => '+7 (909) 428-24-63',
-                             'email' => 'developer-krox@yandex.ru',
+                             'telefon' => $scontacts[0]['telefon'],
+                             'email' => $scontacts[0]['email'],
                              'title' => 'Страница изменения контактной информации'];
                $view = 'change-contacts';
                break;
