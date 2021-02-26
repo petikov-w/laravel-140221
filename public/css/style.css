@@ -280,6 +280,13 @@ main-menu li ul li ul {
 }
 
 /*=============== ФОРМЫ =================*/
+.alert {
+    color: #bf1111;
+    font-size: 18px;
+    font-weight: 500;
+    height: 52px;
+}
+
 
 .form-dsg {
     display: flex;

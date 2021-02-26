@@ -13,19 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'App\Http\Controllers\PageController@showHomePage')->name('home');;
+Route::get('catalog', 'App\Http\Controllers\PageController@showCatalogPage');
+Route::get('about', 'App\Http\Controllers\PageController@showAboutPage');
+Route::get('contact', 'App\Http\Controllers\ContactController@index')->name('contacts');
+//Route::get('contact/change-contacts', 'App\Http\Controllers\ContactController@create')->name('change-contacts.create');
+//Route::post('contact/change-contacts', 'App\Http\Controllers\ContactController@store')->name('change-contacts.store');
+Route::get('admin', 'App\Http\Controllers\ContactController@create')->name('admin.create');
+Route::post('admin', 'App\Http\Controllers\ContactController@store')->name('admin.store');
+Route::redirect('/here', '/there');
 
-Route::get('/', 'App\Http\Controllers\PageController@showHomePage');
-Route::get('{slug}', 'App\Http\Controllers\PageController@showMenuItem');
-Route::get('catalog/{slug}', 'App\Http\Controllers\PageController@showMenuItem');
-Route::get('contact/{slug}', 'App\Http\Controllers\PageController@showMenuItem');
-Route::post('contact/change-contacts/submit', function (){ return "Привет!!!";})->name('contact-form');
-Route::get('links/{id}', 'App\Http\Controllers\PageController@ShowLinksPage');
-
-//Route::get('/token', function (Request $request) {
-//    $token = $request->session()->token();
-//    $token = csrf_token();
-//});
 
 Route::fallback(function (){
-   abort(404, 'Упс! Страница не найдена...');
-});
+   abort(404, 'Упс! Страница не найдена...');}
+   );
